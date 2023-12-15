@@ -3,7 +3,7 @@ import "./style.scss";
 import { copyToClipBoard, formatTicket } from "../utils/stringUtils";
 
 function Home() {
-  const [tickets, setTickets] = createSignal([""]);
+  const [tickets, setTickets] = createSignal([]);
   const [ticket, setTicket] = createSignal("");
 
   const addTicket = () => {
@@ -22,7 +22,7 @@ function Home() {
 
   return (
     <div className="container">
-      <textarea placeholder="add your ticket details" onChange={onChange} />
+      <textarea placeholder="add your ticket details" value={ticket()} onChange={onChange} />
       <button onClick={addTicket}>Add</button>
       {tickets().length ? (
         <>
