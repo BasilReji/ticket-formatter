@@ -3,9 +3,7 @@ import "./style.scss";
 import { copyToClipBoard, formatTicket } from "../utils/stringUtils";
 
 function Home() {
-  const [tickets, setTickets] = createSignal([
-    "https://adres.atlassian.net/browse/VAL-985 [UI] Style Fixes and Type errors",
-  ]);
+  const [tickets, setTickets] = createSignal([""]);
   const [ticket, setTicket] = createSignal("");
 
   const addTicket = () => {
