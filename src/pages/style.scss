@@ -1,0 +1,39 @@
+.container {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    textarea {
+        height: 100px;
+        width: 300px;
+    }
+    > span {
+        &:hover {
+            text-decoration: underline;
+            cursor: pointer;
+        }
+    }
+    table {
+        tbody {
+            tr {
+                td {
+                    span {
+                        &:nth-child(2) {
+                            margin-left: 5px;
+                            cursor: pointer;
+                            &:hover {
+                                text-decoration: overline;
+                            }
+                            &:active {
+                                color: red;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
